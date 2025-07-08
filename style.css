@@ -1,0 +1,122 @@
+:root {
+    --background-color: #0A0A0A;
+    --accent-color: #E63946;
+    --text-color: #FFFFFF;
+    --font-comic: sans-serif, cursive;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: var(--font-comic);
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 5rem;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-comic);
+    letter-spacing: 1px;
+    border: 2px solid var(--accent-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+.bio {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+#designs, #videos {
+    padding: 4rem 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Placeholder for comic panel style */
+.grid-item {
+    border: 4px solid var(--text-color);
+    transition: transform 0.3s, border-color 0.3s;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+}
+
+/* Placeholder for CRT frame style */
+.video-item {
+    border: 10px solid #333;
+    background: #000;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.video-item .play-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    font-family: var(--font-comic);
+}
